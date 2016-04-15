@@ -350,6 +350,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="accept:" destination="x1c-Up-3qH" eventType="touchUpInside" id="JaS-jW-67b"/>
+                                                        <segue destination="51h-zf-Rpo" kind="push" id="rol-GQ-Coe"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -541,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85v-5S-3Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1041" y="4575"/>
+            <point key="canvasLocation" x="-1060" y="4676"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="x4Y-ro-LIc">
@@ -1193,7 +1194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqb-qJ-FjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="3118"/>
+            <point key="canvasLocation" x="-456" y="2842"/>
         </scene>
         <!--Donation pickup map-->
         <scene sceneID="NdO-af-enb">
@@ -1382,7 +1383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWr-E2-OBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2665" y="4633"/>
+            <point key="canvasLocation" x="-200" y="4745"/>
         </scene>
         <!--Donation Overview Map-->
         <scene sceneID="WdT-v9-7JV">
@@ -1402,7 +1403,7 @@
                                     <outlet property="delegate" destination="51h-zf-Rpo" id="SuB-8D-xvs"/>
                                 </connections>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaS-2l-2SP">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vaS-2l-2SP">
                                 <rect key="frame" x="10" y="20" width="580" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQV-ft-qun">
@@ -1438,6 +1439,7 @@
                             <constraint firstAttribute="trailing" secondItem="vaS-2l-2SP" secondAttribute="trailing" constant="10" id="pxh-QI-UX6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GHv-eC-dqq"/>
                     <connections>
                         <outlet property="mapView" destination="rbn-JY-1AV" id="qcA-CI-H4k"/>
                         <segue destination="B4v-Zv-mgG" kind="show" identifier="toDriverMapDetailPending" id="vAS-rJ-zI1"/>
@@ -1445,7 +1447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0h-QS-XCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="3895"/>
+            <point key="canvasLocation" x="-250" y="3157"/>
         </scene>
         <!--Sign Up Navigation View Controller-->
         <scene sceneID="P65-Fk-X00">
@@ -1760,6 +1762,7 @@
                             <constraint firstItem="YKm-DA-pDF" firstAttribute="top" secondItem="lWZ-Qn-5Mn" secondAttribute="top" id="kfd-gu-vqw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XL8-Cx-Qq9"/>
                     <connections>
                         <outlet property="donorCityLabel" destination="dek-ig-kU7" id="riG-06-gWF"/>
                         <outlet property="donorNameLabel" destination="qYV-BL-XgD" id="RbV-Xe-EfI"/>
@@ -1772,7 +1775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsP-Em-K0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="4609"/>
+            <point key="canvasLocation" x="-200" y="3903"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zxc-Y5-6He">
@@ -1802,4 +1805,7 @@
         <image name="personHolder" width="1024" height="1024"/>
         <image name="twitter_white" width="40" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rol-GQ-Coe"/>
+    </inferredMetricsTieBreakers>
 </document>
