@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rSR-Kk-akt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -695,6 +695,9 @@
                             <constraint firstAttribute="trailing" secondItem="ovU-w4-vnU" secondAttribute="trailing" id="xCv-Fg-T6j"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TCz-8G-H6r">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KWt-Aq-Gog"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="inputTextField" destination="4Xd-d7-aMv" id="OD9-cj-dng"/>
@@ -703,7 +706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7v-ey-dEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1127" y="5873"/>
+            <point key="canvasLocation" x="497" y="5873"/>
         </scene>
         <!--Donor Address View Controller-->
         <scene sceneID="GvS-o9-OIE">
@@ -1298,8 +1301,6 @@
         <!--Awaiting Approval Driver View Controller-->
         <scene sceneID="sFC-3j-BLz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jry-7P-ToY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="sFY-3y-BCx" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController storyboardIdentifier="AwaitingApprovalDriverView" id="ka2-Zv-jhu" customClass="AwaitingApprovalDriverViewController" customModule="hackathon_for_hunger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0gw-Tl-EkC"/>
@@ -1346,6 +1347,8 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jry-7P-ToY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sFY-3y-BCx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="826" y="1509"/>
         </scene>
@@ -2212,6 +2215,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g13-Xa-x1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1126" y="6636"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zVL-S0-mEy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zsC-Yx-9pg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2L5-q6-4YC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rSR-Kk-akt" kind="relationship" relationship="rootViewController" id="sNa-On-obK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZa-LG-aPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-315" y="5873"/>
         </scene>
     </scenes>
     <resources>
