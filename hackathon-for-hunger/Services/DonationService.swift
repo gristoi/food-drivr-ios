@@ -19,7 +19,7 @@ class DonationService {
     let manager = Manager()
     typealias JsonDict = [String: AnyObject]
     
-    func addDonations(donations: Donation) -> Promise<[JsonDict]> {
+    func addDonations(donations: Donation) -> Promise<Void> {
         return Promise { fulfill, reject in
             let router = DonationRouter(endpoint: .UpdateDonation(donation: donations))
             
@@ -27,10 +27,9 @@ class DonationService {
                 response in
                 switch response.result {
                 case .Success(let JSON):
-                    if let donations = JSON["donations"] as! [JsonDict]? {
-                        fulfill(donations)
-                    }
-                    break
+                    let donations = JSON as! JsonDict
+                    print(donations)
+                    fulfill()
                 case .Failure(let error):
                     reject(error)
                 }
