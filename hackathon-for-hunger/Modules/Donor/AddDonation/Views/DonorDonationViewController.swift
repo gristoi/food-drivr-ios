@@ -96,9 +96,11 @@ extension DonorDonationViewController: DonationView {
         activityIndicator.stopAnimating()
     }
     func donations(sender: DonationPresenter, didSucceed donations: Donation){
+        finishLoading()
         print(donations)
     }
     func donations(sender: DonationPresenter, didFail error: NSError){
+        finishLoading()
         print(error)
     }
 }
