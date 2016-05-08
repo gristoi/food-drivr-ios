@@ -19,7 +19,7 @@ class DonationService {
     let manager = Manager()
     typealias JsonDict = [String: AnyObject]
     
-    func addDonations(donation: Donation) -> Promise<JsonDict> {
+    func addDonation(donation: Donation) -> Promise<JsonDict> {
         return Promise { fulfill, reject in
             let router = DonationRouter(endpoint: .AddDonation(donation: donation))
             

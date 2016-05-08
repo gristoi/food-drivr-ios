@@ -36,14 +36,11 @@ class DonationPresenter {
     
     
     func addDonation(donation: Donation){
-        donationView?.startLoading()
-        donationService.addDonations(donation).then() {
+        donationService.addDonation(donation).then() {
             donation -> () in
                 let donations = Donation(dict: donation)
-                self.donationView?.finishLoading()
                 self.donationView?.donations(self, didSucceed: donations)
             }.error { error in
-                self.donationView?.finishLoading()
                 self.donationView?.donations(self, didFail: error as NSError)
         }
 
