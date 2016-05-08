@@ -15,8 +15,15 @@ class DonorDonationViewController: UIViewController {
     private let cellIdentifier = "DonationCell"
     var foodToDonate: [String]!
     
+    var activityIndicator : ActivityIndicatorView!
+    private let donationPresenter = DonationPresenter(donationService: DonationService())
+    
     override func viewDidLoad() {
         foodToDonate = [String]()
+        
+        donationPresenter.attachView(self)
+        activityIndicator = ActivityIndicatorView(inview: self.view, messsage: "Please wait")
+        view.addSubview(self.activityIndicator)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -81,8 +88,19 @@ extension DonorDonationViewController: UITextFieldDelegate{
     }
 }
 
-extension DonorDonationViewController {
-    
+extension DonorDonationViewController: DonationView {
+    func startLoading(){
+        activityIndicator.startAnimating()
+    }
+    func finishLoading(){
+        activityIndicator.stopAnimating()
+    }
+    func donations(sender: DonationPresenter, didSucceed donations: Donation){
+        print(donations)
+    }
+    func donations(sender: DonationPresenter, didFail error: NSError){
+        print(error)
+    }
 }
 
 

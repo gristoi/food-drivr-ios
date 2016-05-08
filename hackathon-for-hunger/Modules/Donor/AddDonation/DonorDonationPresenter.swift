@@ -12,7 +12,7 @@ import RealmSwift
 protocol DonationView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
-    func donations(sender: DonationPresenter, didSucceed donations: Results<Donation>)
+    func donations(sender: DonationPresenter, didSucceed donations: Donation)
     func donations(sender: DonationPresenter, didFail error: NSError)
 
 }
@@ -35,8 +35,18 @@ class DonationPresenter {
     }
     
     
-    
+    func addDonation(donation: Donation){
+        donationView?.startLoading()
+        donationService.addDonations(donation).then() {
+            donation -> () in
+                let donations = Donation(dict: donation)
+                self.donationView?.finishLoading()
+                self.donationView?.donations(self, didSucceed: donations)
+            }.error { error in
+                self.donationView?.finishLoading()
+                self.donationView?.donations(self, didFail: error as NSError)
+        }
 
-    
+    }
     
 }
