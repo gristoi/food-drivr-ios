@@ -67,19 +67,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sGv-Dd-dwB">
-                                <rect key="frame" x="0.0" y="40" width="600" height="540"/>
+                                <rect key="frame" x="0.0" y="60" width="600" height="500"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cn-dG-Hw8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cn-dG-Hw8">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="5vf-Fm-dn9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Bebas" family="Bebas" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Bebas" family="Bebas" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xeG-h0-Rgs">
-                                        <rect key="frame" x="0.0" y="114" width="600" height="272"/>
+                                        <rect key="frame" x="0.0" y="94" width="600" height="272"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TN-f4-0Rd">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="272"/>
@@ -94,7 +94,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="52"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -164,10 +164,10 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gdi-SK-I89">
                                                                 <rect key="frame" x="0.0" y="219" width="500" height="53"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhb-CO-pB8">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhb-CO-pB8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="32"/>
                                                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
-                                                                        <state key="normal" title="SIGN UP">
+                                                                        <state key="normal" title="REGISTER">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
@@ -203,7 +203,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-dY-PN6">
-                                        <rect key="frame" x="0.0" y="478" width="600" height="62"/>
+                                        <rect key="frame" x="0.0" y="438" width="600" height="62"/>
                                         <subviews>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Or Login with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ3-oe-KBP">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
@@ -241,8 +241,8 @@
                         <color key="backgroundColor" red="1" green="0.11764705882352941" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="sGv-Dd-dwB" secondAttribute="trailing" id="D4L-GB-tNe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sGv-Dd-dwB" secondAttribute="bottom" constant="20" id="H4x-qc-hOD"/>
-                            <constraint firstItem="sGv-Dd-dwB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hly-0A-uh1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sGv-Dd-dwB" secondAttribute="bottom" constant="40" id="H4x-qc-hOD"/>
+                            <constraint firstItem="sGv-Dd-dwB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="hly-0A-uh1"/>
                             <constraint firstItem="sGv-Dd-dwB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sH0-44-hgQ"/>
                         </constraints>
                     </view>
