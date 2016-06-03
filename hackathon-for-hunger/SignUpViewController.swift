@@ -25,14 +25,21 @@ class SignUpViewController: UIViewController {
     @IBAction func cancelButtonClicked(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func didTapSignupUpInside(sender: AnyObject) {
+        let userType = UserType.init(rawValue: sender.tag)
+        switch userType {
+        case .Donor: break
+            
+        case .Driver: break
+            
+        }
     }
-    */
 
+}
+
+/** Set a enum to match the type of user for triggering segues
+ */
+enum UserType {
+    case Donor = 1, Driver
 }
